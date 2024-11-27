@@ -1,0 +1,33 @@
+@import url('./style.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html[data-theme='default'] {
+        --color-esther: rgb(34, 39, 46);
+        --color-maximus: rgb(45, 51, 59);
+        --color-linx: rgb(55, 62, 71);
+    }
+
+    html[data-theme='neon'] {
+        --color-esther: rgb(20, 61, 42);
+        --color-maximus: rgb(13, 82, 66);
+        --color-linx: rgb(20, 82, 11);
+    }
+}
+
+#themeSwitcher {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    justify-content: center;
+}
+
+#themeSwitcher button {
+    border-radius: 5px;
+}
+
+#input_Todo.error::placeholder {
+    @apply text-red-700/60;
+}
